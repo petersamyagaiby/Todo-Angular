@@ -1,0 +1,20 @@
+<tr>
+  <th>{{ todo.id }}</th>
+  @if (todo.status) {
+  <td>
+    <del>{{ todo.title }}</del>
+  </td>
+  }@else {
+  <td>{{ todo.title }}</td>
+  }
+  <td>
+    <input
+      type="checkbox"
+      (click)="completeTodo(todo.id)"
+      [checked]="todo.status"
+    />
+  </td>
+  <td>
+    <button class="btn btn-danger" (click)="deleteTodo(todo.id)">Delete</button>
+  </td>
+</tr>

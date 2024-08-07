@@ -1,0 +1,4 @@
+<div class="container my-5">
+  <app-todo-form (sendTodoTitle)="addTodo($event)"></app-todo-form>
+  <app-todo-list [todoList]="todoList"></app-todo-list>
+</div>
